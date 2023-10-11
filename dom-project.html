@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <style>
+    body{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
+    .subs{
+      border: none;
+      background-color: black;
+      color: aliceblue;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-bottom: 50px;
+
+    }
+    .subdone{
+      background-color: aquamarine;
+      color: black;
+    }
+    .cost-input{
+      padding: 10px;
+      font-size: 15px;
+    }
+    .calc{
+      background-color: blueviolet;
+      padding-top: 12px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: bold;
+    }
+
+  </style>
+  <body>
+    <p>YouTube subscribe button</p>
+    <button onclick="
+      subscribe();
+      " class = "js-subscribe-button  subs">Subscribe</button>
+    <p>Amazon Shipping Charges</p>
+    <input placeholder="cost of order" class="js-cost-input cost-input" onkeydown="
+    handleCostKeyDown(event);
+    ">
+    <button onclick="
+      calcEl();
+    " class="calc">Calculate</button>
+    <p class="js-calculate-ship"></p>
+    <script>
+      function handleCostKeyDown(event){ 
+        if(event.key==='Enter'){
+          calcEl();
+        }
+      }
+      function calcEl(){
+        const inputEL=document.querySelector('.js-cost-input');
+        let cost = Number(inputEL.value);
+
+        if (cost<40){
+          cost = cost + 10;
+        };
+
+        document.querySelector('.js-calculate-ship')
+          .innerHTML = `$${cost}`;
+
+      };
+      function subscribe(){
+        const buttonEl = document.querySelector('.js-subscribe-button');
+
+        if(buttonEl.innerText==='Subscribe'){
+          buttonEl.innerHTML = 'Subscribed';
+          buttonEl.classList.add('subdone');
+        }else{
+          buttonEl.innerHTML = 'Subscribe'
+          buttonEl.classList.remove('subdone');
+        }
+      }
+      
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      
+      
+      /* const valorant = {
+        agent: 'reyna',
+        ability: 'blind',
+        win: 10
+      };
+      valorant.kills=69;
+      console.log(valorant);
+       */
+      const product2 ={
+        name: 'abid',
+        place: {
+          city: 'luknow',
+          street: 'meow'
+        },
+        halo : function hi(){
+          console.log('namaste');
+
+        }
+      };
+      console.log(product2['name']);
+      console.log(product2.name)
+      console.log(product2.place.street)
+      product2.halo()
+      /* converting javascript to JSON */
+      console.log(JSON.stringify(product2));
+      /* JSON to javascript */
+      const jsonstring= JSON.stringify(product2);
+      console.log(JSON.parse(jsonstring));
+      
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+      const object1 ={
+        message: 'Good Job'
+      };
+      const { message } = object1;
+      console.log(message);
+      const object5 = {
+        message,
+        method() {
+          console.log('method');
+        }
+      };
+
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>
+

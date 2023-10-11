@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Advanced-Functions</title>
+</head>
+
+<body>
+  <button onclick="" class="js-button">click</button>
+  <script>
+    const clbutton = document.querySelector('.js-button');
+    clbutton.addEventListener('click', () => {
+      console.log('hola! amigos');
+    });
+    clbutton.addEventListener('click', () => {
+      console.log('kaise ho? theek ho?');
+    });
+    //   console.log("holaa");
+    // };
+    // function1();
+    // const obj1 = {
+    //   num: 2,
+    //   fun: function meow() {
+    //     console.log("meow");
+    //   },
+    // }
+    // obj1.fun();
+    // function run(param) {
+    //   param();
+    // }
+    // run(function () {
+    //   console.log("bhosda");
+    // });
+    // setTimeout(function () {
+    //   console.log("hola amigos");
+    // }, 3000);
+    // setInterval(function () {
+    //   console.log("hola amigos adios");
+    // }, 3000);
+    // ['choo lo', 'aaoge tum kabhi', 'humnawaaz', 'kaafirana', 'the local train'].forEach((value, index) => {
+    //   if (value === 'humnawaaz') {
+    //     return;
+
+    //   }
+    //   console.log(index);
+    //   console.log(value);
+    // });
+    // const arrfunction = () => {
+    //   console.log('hello')
+    // };
+    // arrfunction();
+    // const arrf2 = () => 2 + 3;
+    // console.log(arrf2());
+    console.log([1, -9, 9].filter((value, index) => {
+      return value >= 0;
+    }));
+    console.log([1, 6, 8].map((value, index) => {
+      return value + 20;
+    }));
+    console.log([2,2,3].map(value=> value*2));
+
+  </script>
+</body>
+
+</html>
